@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.flex {
+  display: flex;
+  height: 100%;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  /* background: -webkit-linear-gradient(left, #a445b2, #fa4299); */
+  background: #f2f2f2;
+}
+.wrapper1 {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+.wrapper {
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.wrapper .title-text {
+  display: flex;
+  width: 400%;
+}
+.wrapper .title-text .title {
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .slide-controls {
+  position: relative;
+  display: flex;
+  height: 49px;
+  width: 99.5%;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  color: #fff;
+  transition: all 0.6s ease;
+}
+.slide-controls .trainee,
+.slide-controls .trainer,
+.slide-controls .hire {
+  color: #000;
+}
+#trainee:checked ~ .slide-tab {
+  left: 25%;
+}
+#trainer:checked ~ .slide-tab {
+  left: 50%;
+}
+#hire:checked ~ .slide-tab {
+  left: 75%;
+}
+#trainee:checked ~ .student,
+#trainer:checked ~ .student,
+#hire:checked ~ .student {
+  color: #000;
+}
+#trainee:checked ~ .trainee,
+#trainer:checked ~ .trainer,
+#hire:checked ~ .hire {
+  color: #fff;
+}
+input[type="radio"] {
+  display: none;
+}
+.slide-controls .slide-tab {
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+  height: 100%;
+  width: 25%;
+  z-index: 0;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-container .form-inner {
+  display: flex;
+  width: 400%;
+}
+.form-container form {
+  width: 500px;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-inner form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  transition: all 0.4s ease;
+}
+.form-inner form .field input :focus {
+  border-color: #fc83bb;
+}
+.form-inner form .pass-link {
+  margin-top: 5px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  text-decoration: none;
+  color: #fa4299;
+}
+
+.form-inner form .signup-link {
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+form .field input[type="submit"] {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0;
+  border: none;
+  cursor: pointer;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
